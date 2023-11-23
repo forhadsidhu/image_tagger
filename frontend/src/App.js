@@ -3,6 +3,7 @@ import { createGlobalStyle } from "styled-components";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Home from "./pages/home";
 import Login from './pages/auth';
+import ImagePage from "./pages/gallery";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -51,6 +52,7 @@ function App() {
         <Switch>
           <Route path="/" component={Home} exact />
           <Route  path="/login" component={Login} />
+          <Route path="/image_world" component={ImagePage}/>
         </Switch>
       </BrowserRouter >
     </>
