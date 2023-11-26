@@ -101,7 +101,7 @@ const MultipleImageUpload = () => {
                                 <div className="kb-data-box">
                                     <div className="kb-modal-data-title">
                                         <div className="kb-data-title">
-                                            <h6>Multiple File Upload With Preview</h6>
+                                            <h6>Upload Your Images</h6>
                                         </div>
                                     </div>
                                     <form onSubmit={FileUploadSubmit}>
