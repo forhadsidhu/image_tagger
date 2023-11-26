@@ -1,9 +1,9 @@
 import React from 'react';
 import './card.css';
 
-const Card = ({ imageUrl, title }) => {
+const ImagWorldCard = ({ imageUrl, title }) => {
   return (
-    <div className="card">
+    <div className="image-world-card">
       <img src={imageUrl} alt={title} />
       <div className="card-content">
         <h3>{title}</h3>
@@ -12,4 +12,4 @@ const Card = ({ imageUrl, title }) => {
   );
 };
 
-export default Card;
+export default ImagWorldCard;
