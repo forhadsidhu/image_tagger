@@ -1,6 +1,6 @@
 from fastapi  import Body, FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-
+from .routers import tag_generation
 
 
 
@@ -20,6 +20,7 @@ app.add_middleware(
     allow_headers = ["*"],
 )
 
+app.include_router(tag_generation.router, prefix="/api/v1")
 
 @app.get("/")
 async def root():
