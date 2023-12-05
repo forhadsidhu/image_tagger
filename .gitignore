@@ -1,2 +1,5 @@
 env/
 tagger_env/
+.env
+alembic/
+alembic.ini
