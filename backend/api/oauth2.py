@@ -12,7 +12,7 @@ SECRET_KEY = settings.SECRET_KEY
 ALGORITHM = settings.ALGORITHM
 ACCESS_TOKEN_EXPIRE_MINUTES = settings.ACCESS_TOKEN_EXPIRE_MINUTES
 
-oauth_scheme = OAuth2PasswordBearer(tokenUrl='login')
+oauth_scheme = OAuth2PasswordBearer(tokenUrl='/api/v1/login')
 
 # Symmetrci encryption used here as for encoding and decoding same key is used here.
 def create_access_token(data: dict):
@@ -28,9 +28,10 @@ def verify_access_token(token:str,credentials_exceptions):
     try:
         payload = jwt.decode(token,SECRET_KEY,algorithms=[ALGORITHM])
         id = payload.get("user_id")
+        print(id)
         if id is None:
             raise credentials_exceptions
-        token_data = schemas.TokenData(id)
+        token_data = schemas.TokenData(id=id)
     except JWSError:
         raise credentials_exceptions
     return token_data
