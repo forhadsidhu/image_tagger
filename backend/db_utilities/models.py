@@ -18,3 +18,12 @@ class ImageResponse(Base):
     image_tags = Column(String(1000),nullable=False)
 
 
+class Users(Base):
+    __tablename__ = 'app_users'
+
+    id = Column(Integer,primary_key=True,nullable=False)
+    email = Column(String(1000),nullable=False,unique=True)
+    password = Column(String(1000),nullable=False)
+    created_at = Column(TIMESTAMP(timezone=True),nullable=False,server_default=text("NOW()"))
+    location = Column(String(1000),nullable=False,default="BD")
+    user_type = Column(String(1000),nullable=False,default="User")

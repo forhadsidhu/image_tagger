@@ -7,6 +7,7 @@ from dotenv import load_dotenv
 from sqlalchemy.orm import Session
 from db_utilities.database import get_db
 from db_utilities import models
+from .. import oauth2
 
 
 
@@ -19,10 +20,8 @@ NLP_API_URL='https://api-inference.huggingface.co/models/nlpconnect/vit-gpt2-ima
 
 
 
-
-
 @router.post("/image_tag",status_code=status.HTTP_201_CREATED,response_model=schemas.tagGenerationOut)
-async def upload(input_file:UploadFile=File(...),db: Session = Depends(get_db)):
+async def upload(input_file:UploadFile=File(...),db: Session = Depends(get_db),current_user:int = Depends(oauth2.get_current_user)):
     
     # Getting input image from client side
     input_image = await input_file.read()

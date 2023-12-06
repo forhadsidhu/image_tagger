@@ -8,5 +8,5 @@ set NODE_OPTIONS=--openssl-legacy-provider
 2. add backend model in alembic .env file
 
 alembic init alembic
-alembic revision --autogenerate -m "Description of changes"
+alembic revision --autogenerate -m "changes occured"
 alembic upgrade head
