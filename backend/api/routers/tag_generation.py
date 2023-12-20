@@ -8,6 +8,7 @@ from sqlalchemy.orm import Session
 from db_utilities.database import get_db
 from db_utilities import models
 from .. import oauth2
+from .feature_extraction import ImageFeature
 
 
 
@@ -28,15 +29,21 @@ async def upload(input_file:UploadFile=File(...),db: Session = Depends(get_db),c
     
     caption_generator = CaptionGenerator(API_TOKEN,NLP_API_URL)
     nltk_ner = NLTKNer()
+    image_feature_extractor = ImageFeature()
     ner_extractor = NERExtractor(ner_strategy=nltk_ner)
     image_tag_processor = ImageTagProcessingFacade(caption_generator=caption_generator,ner_extractor=ner_extractor)
+    
+    # Getting image tag using hugging face models.
     response = image_tag_processor.process_image_and_extract_ner(input_image=input_image)
-
+    
+    # Getting image feature vector which will be stored in db for finding similarity.
+    serialized_feature_str = image_feature_extractor.get_image_features(image=input_image)
  
-    # Save the response into the database
+    # Save the image tag and corresponding feature into the database
     image_response = models.ImageResponse(
         image_path = '1',
-        image_tags = str(response)
+        image_tags = str(response),
+        features = serialized_feature_str
     )
 
     db.add(image_response)

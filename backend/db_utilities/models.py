@@ -16,7 +16,8 @@ class ImageResponse(Base):
     created_at = Column(TIMESTAMP(timezone=True),nullable=False,server_default=text("NOW()"))
     image_path = Column(String(1000),nullable=False)
     image_tags = Column(String(1000),nullable=False)
-
+    features = Column(String(5000))
+    
 
 class Users(Base):
     __tablename__ = 'app_users'
