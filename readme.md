@@ -3,12 +3,13 @@ This project is based on applying AI in image search functionality. For AI model
 
 
 # Installation
+
+---------------In Frontend folder----------------------------
 uvicorn api.main:app --reload
 set NODE_OPTIONS=--openssl-legacy-provider 
 
 
 ---------------In backend folder----------------------------
-
 1. change alembic init file for database path
 2. add backend model in alembic .env file
 
