@@ -2,29 +2,7 @@
 This project is based on applying AI in image search functionality. For AI model we are using Hugging face and Langchain.They provide easy way to integrate promising deep learning model in the application.
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+# Installation
 uvicorn api.main:app --reload
 set NODE_OPTIONS=--openssl-legacy-provider 
 
