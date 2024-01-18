@@ -5,14 +5,24 @@ This project is based on applying AI in image search functionality. For AI model
 ![Figure](https://github.com/forhadsidhu/image_tagger/blob/main/image_tagger_backend_system_design.png)
 
 
-# Installation
+## Installation
 
----------------In Frontend folder----------------------------
+* Python >= 3.6
+* Dependencies: ```pip install -r requirements.txt```
+* Nodejs
+* Reactjs
+
+## Running
+For backend
+```uvicorn api.main:app --reload```
+For Frontend
+```npm start```
+
+
+## Notes
 uvicorn api.main:app --reload
 set NODE_OPTIONS=--openssl-legacy-provider 
 
-
----------------In backend folder----------------------------
 1. change alembic init file for database path
 2. add backend model in alembic .env file
 
