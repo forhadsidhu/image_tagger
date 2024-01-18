@@ -1,6 +1,9 @@
 # AI enabled Image Searching in APP
 This project is based on applying AI in image search functionality. For AI model we are using Hugging face and Langchain.They provide easy way to integrate promising deep learning model in the application.
 
+# Initial System Design
+![Figure](https://github.com/forhadsidhu/image_tagger/blob/main/image_tagger_backend_system_design.png)
+
 
 # Installation
 
