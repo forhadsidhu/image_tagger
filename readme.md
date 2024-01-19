@@ -35,3 +35,6 @@ set NODE_OPTIONS=--openssl-legacy-provider
 alembic init alembic
 alembic revision --autogenerate -m "changes occured"
 alembic upgrade head
+
+
+# :smile: Happy ~~Coding~~ Contributing :two_hearts::two_hearts::two_hearts::two_hearts::two_hearts::two_hearts::two_hearts:
