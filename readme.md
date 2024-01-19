@@ -18,6 +18,10 @@ This project is based on applying AI in image search functionality. For AI model
 * Nodejs
 * Reactjs
 
+## Code Structure
+- **Backend**: Contains the backend RestApi code and some R&D scripts for deep learning task.
+- **Frontend**: Contains the frontend code in Reactjs for integrating the backend api.
+
 ## Running
 For backend
 ```uvicorn api.main:app --reload```
