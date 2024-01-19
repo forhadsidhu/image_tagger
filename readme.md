@@ -4,6 +4,12 @@ This project is based on applying AI in image search functionality. For AI model
 # Initial System Design
 ![Figure](https://github.com/forhadsidhu/image_tagger/blob/main/image_tagger_backend_system_design.png)
 
+# App Review
+![Figure](https://github.com/forhadsidhu/image_tagger/blob/main/static/tagger_frontend_1.PNG)
+![Figure](https://github.com/forhadsidhu/image_tagger/blob/main/static/tagger_frontend_3.PNG)
+![Figure](https://github.com/forhadsidhu/image_tagger/blob/main/static/tagger_frontnend_2.PNG)
+![Figure](https://github.com/forhadsidhu/image_tagger/blob/main/static/tagger_backend_1.PNG)
+
 
 ## Installation
 
